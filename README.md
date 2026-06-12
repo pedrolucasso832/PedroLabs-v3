@@ -8,7 +8,7 @@ A versão 3.0 do PedroLabs foi criada com foco em uma experiência mais moderna,
 
 O portfólio está disponível online pelo GitHub Pages:
 
-https://pedrolucasso832.github.io/PedroLabs/
+https://pedrolucasso832.github.io/PedroLabs-v3/
 
 ## Sobre o Projeto
 
