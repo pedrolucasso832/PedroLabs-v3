@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio de Pedro Lucas, desenvolvedor front-end focado em interfaces modernas, acessíveis e responsivas.">
+    <title>Pedro Lucas | Front-end Developer</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="assets/pedrolabs-logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/pedrolabs-logo.png">
+    <script>
+        const urlTheme = new URLSearchParams(window.location.search).get("theme");
+        const forcedTheme = urlTheme === "light" || urlTheme === "dark" ? urlTheme : null;
+        const savedTheme = localStorage.getItem("pedrolabs-theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.dataset.theme = forcedTheme || savedTheme || (prefersLight ? "light" : "dark");
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#home" class="skip-link">Ir para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+        <nav class="navigation" aria-label="Navegação principal">
+            <a href="#home" class="brand" aria-label="PedroLabs - início">
+                <img src="assets/pedrolabs-logo.png" alt="" class="brand-logo">
+                <span class="brand-name">PedroLabs</span>
+            </a>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contacts" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo claro"
+                    aria-pressed="false">
+                    <i class="fa-solid fa-sun theme-icon-sun" aria-hidden="true"></i>
+                    <i class="fa-solid fa-moon theme-icon-moon" aria-hidden="true"></i>
+                </button>
+
+                <button class="menu-mobile" id="menu-mobile" type="button" aria-label="Abrir menu"
+                    aria-controls="nav-list" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section-reveal" id="home" data-reveal data-replay="true">
+            <div class="section-shell hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">Front-end developer</span>
+                    <h1>Interfaces modernas para marcas, negócios e produtos digitais.</h1>
+                    <p class="hero-description">
+                        Eu sou Pedro Lucas. Crio páginas e sistemas responsivos com foco em clareza visual,
+                        performance, acessibilidade e uma experiência que passa confiança desde o primeiro clique.
+                    </p>
+
+                    <div class="hero-actions" aria-label="Ações principais">
+                        <a href="#projects" class="button button-primary">
+                            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            Ver projetos
+                        </a>
+                        <a href="https://wa.me/5583988510269" target="_blank" rel="noopener noreferrer"
+                            class="button button-secondary">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            Falar comigo
+                        </a>
+                    </div>
+
+                    <dl class="hero-stats" aria-label="Resumo profissional">
+                        <div>
+                            <dt>3+</dt>
+                            <dd>projetos publicados</dd>
+                        </div>
+                        <div>
+                            <dt>100%</dt>
+                            <dd>layout responsivo</dd>
+                        </div>
+                        <div>
+                            <dt>24h</dt>
+                            <dd>foco em evolução</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="hero-visual">
+                    <figure class="profile-card">
+                        <div class="profile-photo-frame">
+                            <img src="assets/foto3.jpeg" alt="Foto de Pedro Lucas" class="profile-photo">
+                        </div>
+                        <figcaption class="profile-caption">
+                            <strong>Pedro Lucas</strong>
+                            <span>Front-end Developer</span>
+                        </figcaption>
+                        <div class="status-line status-top">
+                            <span></span>
+                            Disponível para projetos
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section-reveal" id="about" data-reveal data-replay="true">
+            <div class="section-shell split-layout">
+                <div>
+                    <span class="eyebrow">Sobre mim</span>
+                    <h2>Construo experiências digitais com atenção ao que o usuário realmente percebe.</h2>
+                </div>
+
+                <div class="about-copy">
+                    <p>
+                        Sou Pedro Lucas, desenvolvedor front-end de 24 anos. Tenho interesse por interfaces modernas,
+                        bem organizadas e rápidas, com uma base visual forte e código simples de manter.
+                    </p>
+                    <p>
+                        Gosto de transformar ideias em telas funcionais, desde landing pages até sistemas com fluxos
+                        mais completos. Meu processo junta curiosidade, cuidado com detalhes e entrega prática.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section-reveal" id="skills" data-reveal data-replay="true">
+            <div class="section-shell">
+                <div class="section-heading">
+                    <span class="eyebrow">Stack e serviços</span>
+                    <h2>Do primeiro layout ao site funcionando bem em qualquer tela.</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card" data-reveal>
+                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                        <h3>HTML semântico</h3>
+                        <p>Estrutura clara, acessível e preparada para SEO.</p>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                        <h3>CSS responsivo</h3>
+                        <p>Layouts fluidos, consistentes e bem adaptados ao mobile.</p>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <i class="fa-brands fa-js" aria-hidden="true"></i>
+                        <h3>JavaScript</h3>
+                        <p>Interações, dados dinâmicos, filtros, formulários e microanimações.</p>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+                        <h3>Performance</h3>
+                        <p>Experiências leves, carregamento cuidadoso e navegação confortável.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section-reveal" id="projects" data-reveal data-replay="true">
+            <div class="section-shell">
+                <div class="section-heading projects-heading">
+                    <div>
+                        <span class="eyebrow">Projetos selecionados</span>
+                        <h2>Portfólio preparado para crescer projeto por projeto.</h2>
+                    </div>
+
+                    <div class="project-filters" role="group" aria-label="Filtrar projetos">
+                        <button class="filter-button is-active" type="button" data-filter="all">Todos</button>
+                        <button class="filter-button" type="button" data-filter="site">Sites</button>
+                        <button class="filter-button" type="button" data-filter="app">Apps</button>
+                        <button class="filter-button" type="button" data-filter="portfolio">Portfólio</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="contact section-reveal" id="contacts" data-reveal data-replay="true">
+            <div class="section-shell contact-grid">
+                <div class="contact-copy">
+                    <span class="eyebrow">Contato</span>
+                    <h2>Vamos tirar sua ideia do papel?</h2>
+                    <p>
+                        Estou disponível para projetos web, trabalhos freelancer, oportunidades e novas conexões na área
+                        de tecnologia.
+                    </p>
+
+                    <div class="social-links" aria-label="Redes sociais">
+                        <a href="https://github.com/pedrolucasso832" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub de Pedro Lucas">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/pedrolucass0/" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn de Pedro Lucas">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            LinkedIn
+                        </a>
+                        <a href="mailto:pedrolabs.dev@gmail.com" class="social-link" aria-label="Enviar e-mail">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            E-mail
+                        </a>
+                        <a href="https://wa.me/5583988510269" target="_blank" rel="noopener noreferrer"
+                            class="social-link social-link-whatsapp" aria-label="Conversar pelo WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="form">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" autocomplete="name"
+                        required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email"
+                        required>
+
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+
+                    <button type="submit" class="button button-primary button-full">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        Enviar mensagem
+                    </button>
+
+                    <p id="mensagem-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="ano-atual"></span> PedroLabs. Todos os direitos reservados.</p>
+        <a href="#home" aria-label="Voltar ao início">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
